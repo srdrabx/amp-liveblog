@@ -51,7 +51,7 @@ app.post('/new', (req, res) => {
     title: req.body.title,
     text: req.body.text,
     time: req.body.time,
-    time: req.body.twitter,
+    twitter: req.body.twitter,
     image: req.body.image,
     text2: posts.length + 1,
 	  timestamp: moment().unix(),
