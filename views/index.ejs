@@ -278,11 +278,6 @@ h1 {
   font-weight: 100;
   max-width: 30%;
 }
-@media (min-width: 576px) {
-.timeline {
-  max-width: 65%;
-}
-}
 .timeline h1 {
   font-family: "Saira", sans-serif;
   letter-spacing: 1.5px;
@@ -332,6 +327,12 @@ h1 {
   width: 11px;
   content: "";
   top: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .timeline {
+    max-width: 65%;
+  }
 }
 
   </style>
