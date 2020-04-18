@@ -2,6 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const moment = require('moment');
 
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
+
 // array of posts
 const posts = [];
 // number of post shown in a page
@@ -59,6 +63,6 @@ app.post('/new', (req, res) => {
   res.status(200).json(post);
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
