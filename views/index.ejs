@@ -362,12 +362,12 @@ h1 {
         <li class="event" data-date="T<%= post.time %>">
           <h3><%= post.title %></h3>
           <p><%= post.text %></p>
-          <amp-img src="<%= post.image %>"
+          <amp-img id="<%= post.image %>" src="<%= post.image %>"
             width="1080"
             height="610"
             layout="responsive"
-            alt="AMP"></amp-img>
-          <amp-twitter id="twitter-<%= post.twitter %>"
+            alt="<%= post.title %>"></amp-img>
+          <amp-twitter id="<%= post.twitter %>"
             width="375"
             height="472"
             layout="responsive"
@@ -401,7 +401,7 @@ h1 {
 
   </amp-live-list>
   <script>
-  var link = document.getElementById('twitter-null');
+  var link = document.getElementById('null');
   link.style.display = 'none'; //or
   link.style.visibility = 'hidden';
   </script>
